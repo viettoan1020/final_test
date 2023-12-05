@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm điểm thi cao thứ 3</title>
+</head>
+<body>
+<script>
+    function findMark(arr) {
+        let max = arr[0];
+        let newArr = [];
+        let index = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                index = arr[i].index;
+                newArr = arr.splice(index, 1);
+            }
+        }
+        console.log(newArr);
+
+        let max1 = newArr[0];
+        let index1 = 0;
+        let newArr1 = [];
+        for (let j = 0; j < newArr.length; j++) {
+            if (newArr[j] > max1) {
+                index1 = newArr[j].index;
+                newArr1 = newArr.splice(index1, 1);
+            }
+        }
+        let max2 = newArr1[0];
+        for (let k = 0; k < newArr1.length; k++) {
+            if (newArr1[k] > max2) {
+                max2 = newArr1[k];
+            }
+        }
+        document.write("Giá trị điểm cao thứ 3 trong mảng là : " + max2);
+    }
+
+    findMark([10, 9, 8, 7, 6]);
+</script>
+</body>
+</html>

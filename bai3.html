@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findString(str1, str2) {
+        for (let i = 0; i < str2.length; i++) {
+            for (j = 0; j < str1.length; j++) {
+                if (str1[j] === str2[i]) {
+                    alert("True");
+                    break;
+                } else {
+                    alert("False");
+                    break;
+                }
+
+            }
+            break;
+        }
+    }
+
+    findString('viet toan', 'viet')
+</script>
+</body>
+</html>
